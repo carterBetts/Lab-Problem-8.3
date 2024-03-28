@@ -10,7 +10,15 @@ int convertRomanToInt(string s);
 
 int main(void)
 {
-	cout << convertRomanToInt("X");
+	while (true)
+	{
+		string input;
+		cout << "Enter Roman Numerals, \'Q\' to end: " << endl;
+		getline(cin, input);
+		if (input.compare("Q") == 0)
+			return 0;
+		cout << input << " = " << convertRomanToInt(input) << endl;
+	}
 }
 
 int romanCharValue(char r)
